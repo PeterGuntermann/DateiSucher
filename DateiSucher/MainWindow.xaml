@@ -7,17 +7,19 @@
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" VerticalAlignment="Top">
             <!-- DateiSucher Application -->
             <TabItem Header="DateiSucher">
-                <WrapPanel>
-                    <Label Margin="0,15,0,312" Content="Welche Datei suchst du?" />
+                <!-- Use a page here-->
+                <StackPanel>
+                    <Label Margin="10, 0" Content="Welche Datei suchst du?" />
 
-                    <TextBox Margin="0,97,0,215">gesuchte Datei</TextBox>
+                    <TextBox Margin="10, 0">gesuchte Datei</TextBox>
 
-                    <Button Margin="0,361,0,0">Suchen</Button>
-                </WrapPanel>
+                    <Button HorizontalAlignment="Right" Margin="10" Padding="5, 0">Suchen</Button>
+                </StackPanel>
             </TabItem>
 
             <!-- WPF Playground-->
             <TabItem Header="WPF Playground">
+                <!-- Use a page here-->
                 <StackPanel Width="800">
                     <TextBlock Grid.ColumnSpan="3">TextBlock</TextBlock>
 
