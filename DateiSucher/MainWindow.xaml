@@ -1,28 +1,35 @@
-﻿<Window x:Class="DateiSucher.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<Window x:Class="DateiSucher.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DateiSucher"
-        mc:Ignorable="d"
-        Title="Datei-Sucher" 
-        Height="450" 
-        Width="800">
-    <!--
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:DateiSucher"
+        mc:Ignorable="d" Title="Datei-Sucher" Height="450" Width="800">
     <Grid>
-        <Label Margin="0,0,0,327" Content="Welche Datei suchst du?" />
-        
-        <TextBox Margin="0,97,0,215">gesuchte Datei</TextBox>
-        
-        <Button Margin="0,361,0,0">
-            <Button.Content>
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <!-- DateiSucher Application -->
+            <TabItem Header="DateiSucher">
                 <WrapPanel>
-                    <TextBlock Foreground="Blue">Su</TextBlock>
-                    <TextBlock Foreground="Red">ch</TextBlock>
-                    <TextBlock Foreground="Green">en</TextBlock>
+                    <Label Margin="0,15,0,312" Content="Welche Datei suchst du?" />
+
+                    <TextBox Margin="0,97,0,215">gesuchte Datei</TextBox>
+
+                    <Button Margin="0,361,0,0">Suchen</Button>
                 </WrapPanel>
-            </Button.Content>
-        </Button>
+            </TabItem>
+
+            <!-- WPF Playground-->
+            <TabItem Header="WPF Playground">
+                <StackPanel Width="800">
+                    <TextBlock Grid.ColumnSpan="3">TextBlock</TextBlock>
+
+                    <ListBox Grid.ColumnSpan="3">
+                        <ListBoxItem Content="Element 1" />
+                        <ListBoxItem Content="Element 2" />
+                        <ListBoxItem Content="Element 3" />
+                    </ListBox>
+
+                    <Button Click="Button_Click" Grid.ColumnSpan="3">Button</Button>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
     </Grid>
-    -->
 </Window>
