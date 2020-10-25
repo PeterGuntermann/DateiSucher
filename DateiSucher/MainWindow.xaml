@@ -8,9 +8,21 @@
         Title="Datei-Sucher" 
         Height="450" 
         Width="800">
+    <!--
     <Grid>
-        <Label Margin="0,0,0,327">Welche Datei suchst du?</Label>
-        <TextBox Margin="0,97,0,215">--gesuchte Datei--</TextBox>
-        <Button Margin="0,361,0,0">Suchen</Button>
+        <Label Margin="0,0,0,327" Content="Welche Datei suchst du?" />
+        
+        <TextBox Margin="0,97,0,215">gesuchte Datei</TextBox>
+        
+        <Button Margin="0,361,0,0">
+            <Button.Content>
+                <WrapPanel>
+                    <TextBlock Foreground="Blue">Su</TextBlock>
+                    <TextBlock Foreground="Red">ch</TextBlock>
+                    <TextBlock Foreground="Green">en</TextBlock>
+                </WrapPanel>
+            </Button.Content>
+        </Button>
     </Grid>
+    -->
 </Window>

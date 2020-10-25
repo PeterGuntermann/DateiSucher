@@ -23,6 +23,32 @@ namespace DateiSucher
         public MainWindow()
         {
             InitializeComponent();
+
+            Grid grid = new Grid();
+            this.Content = grid;
+            Button btn = new Button();
+            btn.FontSize = 26;
+            btn.Width = 250;
+            btn.Height = 100;
+
+            WrapPanel wrapPanel = new WrapPanel();
+            TextBlock txt = new TextBlock();
+            txt.Text = "Multi";
+            txt.Foreground = Brushes.Blue;
+            wrapPanel.Children.Add(txt);
+
+            txt = new TextBlock();
+            txt.Text = "Color";
+            txt.Foreground = Brushes.Red;
+            wrapPanel.Children.Add(txt);
+
+            txt = new TextBlock();
+            txt.Text = "Button";
+            txt.Foreground = Brushes.Green;
+            wrapPanel.Children.Add(txt);
+
+            btn.Content = wrapPanel;
+            grid.Children.Add(btn);
         }
     }
 }
