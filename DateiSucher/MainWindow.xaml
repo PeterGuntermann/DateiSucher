@@ -4,9 +4,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:DateiSucher"
         mc:Ignorable="d" Title="Datei-Sucher" Height="450" Width="800">
     <Grid>
-        <TabControl x:Name="tabControl" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <TabControl HorizontalAlignment="Left" VerticalAlignment="Top">
             <!-- DateiSucher Application -->
-            <TabItem Header="DateiSucher">
+            <TabItem Width="150" Height="30" VerticalAlignment="Center" Header="DateiSucher">
                 <!-- Use a page here-->
                 <StackPanel>
                     <Label Margin="10, 0" Content="Welche Datei suchst du?" />
@@ -18,18 +18,18 @@
             </TabItem>
 
             <!-- WPF Playground-->
-            <TabItem Header="WPF Playground">
+            <TabItem Width="150" Height="30" VerticalAlignment="Center" Header="WPF Playground">
                 <!-- Use a page here-->
-                <StackPanel Width="800">
-                    <TextBlock Grid.ColumnSpan="3">TextBlock</TextBlock>
+                <StackPanel>
+                    <TextBlock>TextBlock</TextBlock>
 
-                    <ListBox Grid.ColumnSpan="3">
+                    <ListBox>
                         <ListBoxItem Content="Element 1" />
                         <ListBoxItem Content="Element 2" />
                         <ListBoxItem Content="Element 3" />
                     </ListBox>
 
-                    <Button Click="Button_Click" Grid.ColumnSpan="3">Button</Button>
+                    <Button Click="Button_Click">Button</Button>
                 </StackPanel>
             </TabItem>
         </TabControl>
