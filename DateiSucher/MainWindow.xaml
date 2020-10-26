@@ -3,6 +3,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DateiSucher"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Background="{DynamicResource MaterialDesignPaper}"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -21,8 +22,19 @@
 
     <StackPanel>
         <WrapPanel>
-            <Button Margin="10" Style="{StaticResource MaterialDesignRaisedAccentButton}" Content="DateiSucher" />
-            <Button Margin="10" Style="{StaticResource MaterialDesignRaisedLightButton}" Content="WPF Playground" />
+            <Button Margin="10" 
+                    BorderBrush="{x:Null}" 
+                    Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                    ToolTip="DateiSucher">
+                <Button.Content>
+                    <materialDesign:PackIcon Kind="Search" />
+                </Button.Content>
+            </Button>
+
+            <Button Margin="10"
+                    BorderBrush="{x:Null}" 
+                    Style="{StaticResource MaterialDesignRaisedLightButton}"
+                    Content="WPF Playground" />
         </WrapPanel>
 
         <TabControl HorizontalAlignment="Left" VerticalAlignment="Top">
