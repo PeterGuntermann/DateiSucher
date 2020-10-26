@@ -4,10 +4,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DateiSucher"
         mc:Ignorable="d"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Title="Datei-Sucher"
-        Height="450"
-        Width="800">
-    <Grid>
+        Height="800"
+        Width="1080">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <StackPanel>
+        <WrapPanel>
+            <Button Margin="10" Style="{StaticResource MaterialDesignRaisedAccentButton}" Content="DateiSucher" />
+            <Button Margin="10" Style="{StaticResource MaterialDesignRaisedLightButton}" Content="WPF Playground" />
+        </WrapPanel>
+
         <TabControl HorizontalAlignment="Left" VerticalAlignment="Top">
             <!-- DateiSucher Application -->
             <TabItem Width="150" Height="30" VerticalAlignment="Center" Header="DateiSucher">
@@ -37,5 +54,5 @@
                 </StackPanel>
             </TabItem>
         </TabControl>
-    </Grid>
+    </StackPanel>
 </Window>
