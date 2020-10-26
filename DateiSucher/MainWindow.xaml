@@ -21,50 +21,17 @@
     </Window.Resources>
 
     <StackPanel>
-        <WrapPanel>
-            <Button Margin="10" 
-                    BorderBrush="{x:Null}" 
-                    Style="{StaticResource MaterialDesignRaisedAccentButton}"
-                    ToolTip="DateiSucher">
-                <Button.Content>
-                    <materialDesign:PackIcon Kind="Search" />
-                </Button.Content>
-            </Button>
+        <StackPanel>
+            <Label Margin="10, 0" Content="Wonach suchst du?" />
+            <TextBox Margin="10, 0, 10, 20" />
 
-            <Button Margin="10"
-                    BorderBrush="{x:Null}" 
-                    Style="{StaticResource MaterialDesignRaisedLightButton}"
-                    Content="WPF Playground" />
-        </WrapPanel>
+            <Label Margin="10, 0" Content="In welchem Ordner?" />
+            <Button Margin="10, 0, 10, 20" HorizontalAlignment="Left"
+                    Style="{StaticResource MaterialDesignRaisedAccentButton}" Content="Ordner auswählen"
+                    Click="ChooseFolderButton_Click" />
+            <TextBox Name="searchedFolder" />
 
-        <TabControl HorizontalAlignment="Left" VerticalAlignment="Top">
-            <!-- DateiSucher Application -->
-            <TabItem Width="150" Height="30" VerticalAlignment="Center" Header="DateiSucher">
-                <!-- Use a page here-->
-                <StackPanel>
-                    <Label Margin="10, 0" Content="Welche Datei suchst du?" />
-
-                    <TextBox Margin="10, 0" Text="gesuchte Datei" />
-
-                    <Button HorizontalAlignment="Right" Margin="10" Padding="5, 0">Suchen</Button>
-                </StackPanel>
-            </TabItem>
-
-            <!-- WPF Playground-->
-            <TabItem Width="150" Height="30" VerticalAlignment="Center" Header="WPF Playground">
-                <!-- Use a page here-->
-                <StackPanel>
-                    <TextBlock>TextBlock</TextBlock>
-
-                    <ListBox>
-                        <ListBoxItem Content="Element 1" />
-                        <ListBoxItem Content="Element 2" />
-                        <ListBoxItem Content="Element 3" />
-                    </ListBox>
-
-                    <Button Click="Button_Click">Button</Button>
-                </StackPanel>
-            </TabItem>
-        </TabControl>
+            <Button Margin="10" Padding="15, 0" Content="Suchen" Click="SearchButton_Click" />
+        </StackPanel>
     </StackPanel>
 </Window>

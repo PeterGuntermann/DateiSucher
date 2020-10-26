@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using System.IO;
+using System.Windows;
+using Microsoft.Win32;
+using WinForms = System.Windows.Forms;
 
 namespace DateiSucher
 {
@@ -12,9 +15,20 @@ namespace DateiSucher
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Thanks for clicking.");
+            // TODO: Not yet implemented.
+            MessageBox.Show("Not yet implemented.");
+        }
+
+        private void ChooseFolderButton_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new WinForms.FolderBrowserDialog();
+            dialog.ShowDialog();
+            
+            // OpenFileDialog openFileDialog = new OpenFileDialog();
+            // if(openFileDialog.ShowDialog() == true)
+            //     searchedFolder.Text = File.ReadAllText(openFileDialog.FileName);
         }
     }
 }
