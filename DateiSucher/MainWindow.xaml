@@ -21,17 +21,17 @@
     </Window.Resources>
 
     <StackPanel>
-        <StackPanel>
-            <Label Margin="10, 0" Content="Wonach suchst du?" />
-            <TextBox Margin="10, 0, 10, 20" />
+        <StackPanel Margin="20">
+            <Label Content="Wonach suchst du?" />
+            <TextBox Margin="0,0,0,20" />
 
-            <Label Margin="10, 0" Content="In welchem Ordner?" />
-            <Button Margin="10, 0, 10, 20" HorizontalAlignment="Left"
+            <Label Content="In welchem Ordner?" />
+            <Button Margin="0,0,0,10" HorizontalAlignment="Left"
                     Style="{StaticResource MaterialDesignRaisedAccentButton}" Content="Ordner auswählen"
                     Click="ChooseFolderButton_Click" />
-            <TextBox Name="searchedFolder" />
+            <TextBox Margin="0,0,0,20" Name="SearchedFolder" />
 
-            <Button Margin="10" Padding="15, 0" Content="Suchen" Click="SearchButton_Click" />
+            <Button Margin="0" Padding="15, 0" Content="Suchen" Click="SearchButton_Click" />
         </StackPanel>
     </StackPanel>
 </Window>

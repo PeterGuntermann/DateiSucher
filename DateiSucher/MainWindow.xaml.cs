@@ -24,11 +24,13 @@ namespace DateiSucher
         private void ChooseFolderButton_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new WinForms.FolderBrowserDialog();
-            dialog.ShowDialog();
-            
-            // OpenFileDialog openFileDialog = new OpenFileDialog();
-            // if(openFileDialog.ShowDialog() == true)
-            //     searchedFolder.Text = File.ReadAllText(openFileDialog.FileName);
+            if (SearchedFolder.Text != string.Empty)
+                dialog.SelectedPath = SearchedFolder.Text;
+
+            var dialogResult = dialog.ShowDialog();
+
+            if (dialogResult == WinForms.DialogResult.OK)
+                SearchedFolder.Text = dialog.SelectedPath;
         }
     }
 }
