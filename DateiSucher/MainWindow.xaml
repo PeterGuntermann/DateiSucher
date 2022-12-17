@@ -3,6 +3,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:controls="clr-namespace:AdonisUI.Controls;assembly=AdonisUI"
+        xmlns:dateiSucher="clr-namespace:DateiSucher"
+        xmlns:userControls="clr-namespace:DateiSucher.UserControls"
         mc:Ignorable="d"
         ResizeMode="CanResizeWithGrip"
         Title="Datei-Sucher"
@@ -53,14 +55,8 @@
             <TextBlock
                 Text="Search Results" Margin="0,0,0,20" FontWeight="Bold" />
             
-            <TreeView>
-                <TreeViewItem Header="item1">a</TreeViewItem>
-                <TreeViewItem Header="item2">
-                    <TreeViewItem Header="item 2a"></TreeViewItem>
-                    <TreeViewItem Header="item 2b"></TreeViewItem>
-                </TreeViewItem>
-                <TreeViewItem Header="item3">c</TreeViewItem>
-            </TreeView>
+            <userControls:FileTree/>
+            
         </StackPanel>
     </Grid>
 </Window>
