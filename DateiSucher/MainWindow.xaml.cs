@@ -1,6 +1,6 @@
-﻿using System.IO;
-using System.Windows;
-using Microsoft.Win32;
+﻿using System.Windows;
+using AdonisUI.Controls;
+using MessageBox = System.Windows.MessageBox;
 using WinForms = System.Windows.Forms;
 
 namespace DateiSucher
