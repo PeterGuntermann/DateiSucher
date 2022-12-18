@@ -10,9 +10,13 @@ namespace DateiSucher;
 /// </summary>
 public partial class MainWindow : Window
 {
-    public MainWindow()
+    private readonly IFileService _fileService;
+    public string Foo => _fileService.Foo();
+    
+    public MainWindow(IFileService fileService)
     {
         InitializeComponent();
+        _fileService = fileService;
     }
 
     private void SearchButton_Click(object sender, RoutedEventArgs e)
